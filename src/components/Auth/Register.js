@@ -17,10 +17,17 @@ const Register = ({ history }) => {
     const [password, setPassword] = useState('')
 
     const submitForm = (e) => {
-        e.preventDefault()
+            axios.post('/auth/register', { firstName, lastName, email, gender, password, password })
+              .then(res => {
+                  console.log(res.data)
+                props.history.push('/login')
+              }) 
+              
+        // e.preventDefault()
 
-        dispatch(register({ firstName, lastName, email, gender, password }, history))
+        // dispatch(register({ firstName, lastName, email, gender, password }, history))
     }
+
 
     return (
         <div id='auth-container'>

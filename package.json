@@ -2,7 +2,7 @@
   "name": "chat.io-main",
   "version": "1.0.0",
   "description": "OKAY WELCOME TO COOL CHAT APP,",
-  "main": "chat-backend/index.js",
+  "main": "chat-backend/index",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
