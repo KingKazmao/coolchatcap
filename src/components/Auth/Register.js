@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux'
 import { register } from '../../store/actions/auth'
 import './Auth.scss'
 
+
 const Register = ({ history }) => {
 
     const dispatch = useDispatch()
