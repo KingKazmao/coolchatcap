@@ -5,6 +5,7 @@ import { setCurrentChat } from '../../../../store/actions/chat'
 import Modal from '../../../Modal/Modal'
 import ChatService from '../../../../services/chatService'
 import './FriendList.scss'
+import axios from 'axios'
 
 const FriendList = () => {
 

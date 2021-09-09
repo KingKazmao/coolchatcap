@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { register } from '../../store/actions/auth'
 import './Auth.scss'
+import axios from 'axios'
 
 
 const Register = ({ history }) => {
@@ -16,17 +17,19 @@ const Register = ({ history }) => {
     const [gender, setGender] = useState('male')
     const [password, setPassword] = useState('')
 
-    const submitForm = (e) => {
-            axios.post('/auth/register', { firstName, lastName, email, gender, password, password })
-              .then(res => {
+     const submitForm = (e) => {
+        e.preventDefault()
+         console.log("bobomb")    
+         axios.post('/auth/register', { firstName, lastName, email, gender, password, password })
+               .then(res => {
                   console.log(res.data)
-                props.history.push('/login')
-              }) 
+                //props.history.push('/login')
+               }) 
               
-        // e.preventDefault()
+    // e.preventDefault()
 
-        // dispatch(register({ firstName, lastName, email, gender, password }, history))
-    }
+    //  dispatch(register({ firstName, lastName, email, gender, password }, history))
+     }
 
 
     return (
